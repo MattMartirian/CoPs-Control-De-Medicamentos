@@ -1,1 +1,1 @@
-CoPs (Control de Psicotrópicos) es un programa enfocado en la detección, verificación y almacenamiento de diferentes codigos de barras para evitar la venta duplicada de psicotropicos.
+CoPs (Control de Psicotrópicos) es un sistema diseñado para la detección, verificación y almacenamiento de códigos de barras en recetas médicas, con el objetivo de prevenir la venta duplicada de psicotrópicos. Su enfoque se centra en garantizar un control riguroso, mejorar la trazabilidad y reforzar la seguridad en la dispensación de estos medicamentos.
