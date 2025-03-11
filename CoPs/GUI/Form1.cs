@@ -21,6 +21,7 @@ namespace GUI
             registroCodigos = new RegistroCodigos("codigos.json");
             this.FormClosing += Form1_FormClosing;
             this.CenterToScreen();
+            //generarCodigos();
             ActualizarGrilla();
         }
 
@@ -150,12 +151,25 @@ namespace GUI
             catch (Exception ex)
             {
                 // Aquí puedes lanzar el mensaje con la excepción detectada
-                MessageBox.Show($"Posible receta maliciosa detectada. Le recomendamos no realizar la venta de este psicotrópico.\n\nRazón de la detección:\n{ex.Message}");
+                MessageBox.Show($"Posible receta maliciosa detectada. Le recomendamos no realizar la venta de este psicotrópico.\n\nRazón de la detección:\n{ex.Message}", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
 
 
+        public void generarCodigos()
+        {
+            var random = new Random();
+            int cantidad = 15000;
+            int i = 0;
+
+            while (i < cantidad)
+            {
+                long codigo = (long)(random.NextDouble() * (9999999999999 - 9000000000000)) + 9000000000000;
+                registroCodigos.AgregarCodigo(codigo.ToString());
+                i++;
+            }
+        }
 
     }
 }
